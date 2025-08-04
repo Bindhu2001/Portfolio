@@ -7,7 +7,7 @@ export default function Techstack() {
 
  
   return (
-    <section id="stack" className="py-20 px-6 bg-[#f8f9fa]">
+    <section id="techstack" className="py-20 px-6 bg-[#f8f9fa]">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-[#686997] mb-12">
           Tech Stack
