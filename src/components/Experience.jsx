@@ -20,7 +20,7 @@ export default function Experience() {
               Nintriva Technologies
             </h1>
             <p className="text-sm text-gray-500 italic">
-              July 2023 – Present
+              June 2024 – Present
             </p>
           </div>
 
