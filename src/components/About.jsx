@@ -1,23 +1,62 @@
+import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
+
 export default function About() {
   return (
-    <section className="about relative min-h-screen flex items-center justify-center px-6 py-16 bg-white text-gray-900 overflow-hidden">
-      {/* Gradient Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-br from-[#686997] via-[#a8a6c4] to-[#e4e2f2] opacity-30 blur-2xl mix-blend-multiply z-0" />
+    <section id="about" className="relative min-h-screen flex items-center justify-center section-padding overflow-hidden">
+      {/* Immersive Background Gradients */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-brand/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] animate-pulse delay-1000" />
+      </div>
 
-      <div className="relative z-10 max-w-3xl text-center">
-        <h1 className="text-3xl md:text-5xl mt-7 font-extrabold leading-tight">
-          Hello, I'm Bindu Vijayan.
-          <br />
-          <span className="text-gray-800 text-xl">I'm a Back-end developer.</span>
-        </h1>
+      <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-16 items-center">
+        <div className="space-y-8 text-center lg:text-left">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand/10 border border-brand/20 rounded-full text-brand-light text-xs font-bold uppercase tracking-[0.2em]">
+            <span className="w-2 h-2 bg-brand rounded-full animate-ping" />
+            Available for new opportunities
+          </div>
+          
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-none">
+            ENGINEERING <br />
+            <span className="text-gradient">THE FUTURE.</span>
+          </h1>
 
-        <p className="mt-6 text-sm md:text-base font-medium text-gray-700 leading-relaxed">
-          I specialize in building modern, responsive web applications using React, Laravel, and Tailwind CSS.
-          <br />
-          With a passion for clean design and efficient code, I focus on creating seamless user experiences that balance both aesthetics and performance.
-          <br />
-          I believe in constant learning, clear communication, and solving real-world problems through technology.
-        </p>
+          <p className="text-xl md:text-2xl text-slate-400 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
+            Hi, I'm <span className="text-white">Bindu V</span>. A Full Stack Developer crafting scalable backends and immersive mobile experiences with <span className="text-brand-light">PHP, React & AI.</span>
+          </p>
+
+          <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-4">
+            <button className="group relative px-8 py-4 bg-brand text-white rounded-full font-bold text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(168,85,247,0.4)]">
+              <span className="relative z-10 flex items-center gap-2">
+                View My Projects <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </button>
+            
+            <div className="flex items-center gap-4">
+              <a href="https://github.com/Bindhu2001" className="w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-all">
+                <Github size={22} />
+              </a>
+              <a href="https://www.linkedin.com/in/bindu-vijayan/" className="w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-all">
+                <Linkedin size={22} />
+              </a>
+              <a href="mailto:binduvijayan513@gmail.com" className="w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-all">
+                <Mail size={22} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Decorative Visual Element */}
+        <div className="hidden lg:block relative">
+          <div className="relative w-full aspect-square glass-card rounded-[40px] rotate-3 flex items-center justify-center p-12 overflow-hidden glow-border">
+             <div className="absolute inset-0 bg-gradient-to-br from-brand/20 to-transparent" />
+             <div className="text-[200px] font-black opacity-10 select-none tracking-tighter">BV</div>
+             <div className="absolute bottom-10 left-10 text-left">
+                <p className="text-brand-light font-mono text-sm mb-1">// Current Focus</p>
+                <h3 className="text-2xl font-bold">React Native & AI Integration</h3>
+             </div>
+          </div>
+        </div>
       </div>
     </section>
   );

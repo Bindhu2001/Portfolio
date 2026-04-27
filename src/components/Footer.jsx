@@ -1,30 +1,60 @@
-export default function Footer() {
-  return (
-    <footer id="contact" className="bg-gray-100 py-8 px-4 text-center border-t border-gray-300">
-      <p className="text-[#686997] text-sm font-semibold mb-2">© 2025 Bindhu Vijayan. All rights reserved.</p>
-      
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-[#686997] text-sm">
-        <a href="mailto:bindhuvijayan01@gmail.com.com" className="hover:underline" target="_blank">
-          📧 binduvijayan01@gmail.com
-        </a>
-      <a
-  href="https://www.linkedin.com/in/bindu-vijayan/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center gap-1 text-[#686997] hover:underline"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="#686997"
-    viewBox="0 0 24 24"
-    className="w-5 h-5"
-  >
-    <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.6v2.2h.05c.5-.95 1.75-2.2 3.6-2.2 3.85 0 4.55 2.55 4.55 5.9V24h-4V14.3c0-2.3-.05-5.3-3.25-5.3-3.25 0-3.75 2.5-3.75 5.1V24h-4V8z" />
-  </svg>
-  LinkedIn
-</a>
+import { Github, Linkedin, Mail, Heart, ArrowUpRight } from "lucide-react";
 
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer id="contact" className="bg-bg-deep text-white section-padding relative overflow-hidden border-t border-white/5">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-24 items-center mb-24">
+          <div className="space-y-10 text-center lg:text-left">
+            <h2 className="text-6xl md:text-8xl font-black tracking-tighter leading-none">
+              READY TO <br />
+              <span className="text-gradient">CONNECT?</span>
+            </h2>
+            <p className="text-slate-400 text-xl font-medium max-w-md mx-auto lg:mx-0">
+              I'm always looking for ambitious projects and clever collaborations.
+            </p>
+            <div className="flex justify-center lg:justify-start items-center gap-10">
+              <a href="https://github.com/Bindhu2001" className="text-slate-400 hover:text-brand transition-all scale-125">
+                <Github size={28} />
+              </a>
+              <a href="https://www.linkedin.com/in/bindu-vijayan/" className="text-slate-400 hover:text-white transition-all scale-125">
+                <Linkedin size={28} />
+              </a>
+              <a href="mailto:binduvijayan513@gmail.com" className="text-slate-400 hover:text-brand transition-all scale-125">
+                <Mail size={28} />
+              </a>
+            </div>
+          </div>
+
+          <div className="glass-card rounded-[50px] p-12 glow-border relative group">
+             <div className="absolute top-8 right-8 text-brand animate-bounce">
+                <ArrowUpRight size={32} />
+             </div>
+             <div className="space-y-10">
+                <div>
+                   <p className="text-xs font-black tracking-[0.3em] text-slate-500 mb-4 uppercase">Direct Line</p>
+                   <a href="mailto:binduvijayan513@gmail.com" className="text-3xl md:text-4xl font-bold hover:text-brand transition-colors break-words">
+                      binduvijayan513<span className="text-brand">@</span>gmail.com
+                   </a>
+                </div>
+                <div>
+                   <p className="text-xs font-black tracking-[0.3em] text-slate-500 mb-4 uppercase">Base</p>
+                   <p className="text-3xl font-bold">Palakkad, India</p>
+                </div>
+             </div>
+          </div>
+        </div>
+
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-600 text-[10px] font-black tracking-widest uppercase">
+          <p>© {currentYear} BINDU V. DESIGNED FOR THE FUTURE.</p>
+          <div className="flex items-center gap-2">
+            MADE WITH <Heart size={14} className="text-brand fill-current" /> BY ANTIGRAVITY
+          </div>
+        </div>
       </div>
     </footer>
   );
 }
+

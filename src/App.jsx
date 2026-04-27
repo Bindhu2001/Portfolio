@@ -1,15 +1,15 @@
 import Navbar from './components/Navbar'
 import About from './components/About'
 import Techstack from './components/Techstack'
-import Footer from './components/Footer'
 import Experience from './components/Experience'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="bg-black text-white">
+    <div className="min-h-screen">
       <Navbar />
       <About />
-      <Experience/>
+      <Experience />
       <Techstack />
       <Footer />
     </div>
@@ -17,3 +17,4 @@ function App() {
 }
 
 export default App;
+

@@ -1,116 +1,104 @@
+import { Briefcase, Calendar, MapPin, ChevronRight, Zap } from "lucide-react";
+
+const experiences = [
+  {
+    company: "Great Leap",
+    location: "Pipeline, Ernakulam",
+    period: "Aug 2025 – Present",
+    role: "Full Stack Developer",
+    color: "from-brand to-purple-600",
+    projects: [
+      {
+        name: "HRMS (MyPayrollMaster)",
+        details: [
+          "Engineered a MySQL Exception Engine to automate complex attendance validation via Stored Procedures.",
+          "Built secure Role-Based Access Control (RBAC) with dynamic menu permissions.",
+          "Implemented automated leave deduction and asset tracking modules."
+        ]
+      },
+      {
+        name: "Rizo Mobile App",
+        details: ["Architected a cross-platform React Native app for field force management with real-time dashboards."]
+      }
+    ]
+  },
+  {
+    company: "Nintriva Technologies",
+    location: "Kakkanad, Ernakulam",
+    period: "June 2024 – Aug 2025",
+    role: "Backend Developer",
+    color: "from-accent to-blue-600",
+    projects: [
+      {
+        name: "Kesher CRM",
+        details: ["Developed high-performance backend architecture using Yii2 MVC for global contact tracking."]
+      },
+      {
+        name: "Trybond Form System",
+        details: ["Built a dynamic data collection engine with advanced server-side validation and secure PHP storage."]
+      }
+    ]
+  }
+];
+
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="relative px-6 py-20 bg-white text-gray-900 overflow-hidden"
-    >
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#686997] via-[#a8a6c4] to-[#e4e2f2] opacity-30 blur-2xl mix-blend-multiply z-0" />
-
-      <div className="relative z-10 max-w-4xl mx-auto">
-
-        <h2 className="text-4xl font-extrabold text-center text-[#686997] mb-12">
-          Work Experience & Projects
-        </h2>
-
-        <div className="bg-white border-l-4 border-[#686997] shadow-lg p-6 rounded-lg space-y-6">
-          {/* Nintriva */}
-          <div className="flex flex-col md:flex-row justify-between items-center mb-4">
-            <h1 className="text-2xl font-bold text-[#686997]">
-              Nintriva Technologies
-            </h1>
-            <p className="text-sm text-gray-500 italic">
-              June 2024 – Present
-            </p>
-          </div>
-
-          {/* Kesher */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#686997]">
-              Kesher – Contact Management CRM
-            </h3>
-            <p className="text-gray-700 mt-1">
-              A CRM system for efficient contact management, helping businesses
-              organize and track customer interactions.
-            </p>
-            <ul className="list-disc list-inside text-gray-600 mt-2 space-y-1">
-              <li>Built backend architecture using Yii2 MVC.</li>
-              <li>Implemented secure authentication & role-based access.</li>
-              <li>Optimized database queries for faster response times.</li>
-              <li>Integrated RESTful APIs for data exchange.</li>
-            </ul>
-          </div>
-
-          {/* Trybond */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#686997]">
-              Trybond – Form Management System
-            </h3>
-            <p className="text-gray-700 mt-1">
-              A dynamic form management platform for seamless data collection
-              and validation.
-            </p>
-            <ul className="list-disc list-inside text-gray-600 mt-2 space-y-1">
-              <li>Developed custom form handling features using PHP & Yii2.</li>
-              <li>Ensured secure data storage & validation.</li>
-              <li>Optimized backend performance & security.</li>
-            </ul>
-          </div>
-
-          {/* NMS */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#686997]">
-              NMS – Official Website
-            </h3>
-            <p className="text-gray-700 mt-1">
-              The working website for NMS, built with modern frontend technologies.
-            </p>
-            <ul className="list-disc list-inside text-gray-600 mt-2 space-y-1">
-              <li>Developed backend logic for seamless functionality.</li>
-              <li>Integrated frontend technologies (HTML, CSS, JavaScript, jQuery).</li>
-              <li>Ensured high performance & security.</li>
-            </ul>
-          </div>
+    <section id="experience" className="section-padding relative">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-24 text-center">
+          <h2 className="text-5xl md:text-6xl font-black text-white tracking-tighter mb-4">
+            EXPERIENCE<span className="text-brand">.</span>
+          </h2>
+          <p className="text-slate-400 text-lg md:text-xl font-medium tracking-wide uppercase">
+            Building robust enterprise solutions
+          </p>
         </div>
-      </div>
 
-      {/* Internship & Course Section */}
-      <div className="relative z-10 max-w-4xl mx-auto">
+        <div className="space-y-32">
+          {experiences.map((exp, idx) => (
+            <div key={idx} className="relative">
+              <div className="absolute -top-12 -left-4 text-9xl font-black text-white/5 select-none -z-10 tracking-tighter">
+                0{idx + 1}
+              </div>
+              
+              <div className="flex flex-col lg:flex-row gap-12 items-start">
+                <div className="lg:w-1/3 sticky top-32">
+                   <div className={`inline-block p-4 rounded-2xl bg-gradient-to-br ${exp.color} mb-6 shadow-lg shadow-brand/20`}>
+                      <Briefcase size={24} className="text-white" />
+                   </div>
+                   <h3 className="text-4xl font-bold text-white mb-2">{exp.company}</h3>
+                   <p className="text-brand-light font-bold text-lg mb-6">{exp.role}</p>
+                   <div className="space-y-3 text-slate-400 font-medium">
+                      <div className="flex items-center gap-3">
+                         <Calendar size={18} className="text-brand" /> {exp.period}
+                      </div>
+                      <div className="flex items-center gap-3">
+                         <MapPin size={18} className="text-brand" /> {exp.location}
+                      </div>
+                   </div>
+                </div>
 
-        <h2 className="text-4xl font-extrabold text-center text-[#686997] mb-12 mt-8">
-          Internship & Course
-        </h2>
-
-        <div className="bg-white border-l-4 border-[#686997] shadow-lg p-6 rounded-lg space-y-6">
-          {/* Nesote */}
-          <div className="flex flex-col md:flex-row justify-between items-center mb-4">
-            <h1 className="text-xl font-bold text-[#686997]">
-              Nesote Technologies Pvt Ltd
-            </h1>
-            <p className="text-sm text-gray-500 italic text-right md:text-left">
-              PHP Developer Intern | Dec 2023 – Jan 2024
-            </p>
-          </div>
-          <div className="text-[#686997] text-sm leading-relaxed space-y-2">
-            <p>• Worked on real-time PHP projects, coding and debugging web applications.</p>
-            <p>• Developed structured applications using the CodeIgniter MVC framework.</p>
-            <p>• Assisted in implementing best PHP development practices.</p>
-          </div>
-
-          {/* Avodha */}
-          <div className="flex flex-col md:flex-row justify-between items-center mt-6 mb-4">
-            <h1 className="text-xl font-bold text-[#686997]">
-              Avodha Edutech
-            </h1>
-            <p className="text-sm text-gray-500 italic text-left md:text-left">
-              Full Stack Development Course | March 2023 – August 2023
-            </p>
-          </div>
-          <div className="text-[#686997] text-sm leading-relaxed space-y-2">
-            <p>• Completed an intensive full-stack web development course covering both frontend and backend technologies.</p>
-            <p>• Gained hands-on experience with HTML, CSS, JavaScript, PHP, MySQL, and Laravel framework.</p>
-            <p>• Built multiple mini-projects and learned industry best practices in software development.</p>
-          </div>
+                <div className="lg:w-2/3 grid md:grid-cols-2 gap-8">
+                  {exp.projects.map((project, pIdx) => (
+                    <div key={pIdx} className="glass-card p-8 rounded-3xl glow-border group hover:-translate-y-2 transition-all duration-500">
+                      <div className="flex items-center justify-between mb-6">
+                        <h4 className="text-xl font-bold text-white">{project.name}</h4>
+                        <Zap size={18} className="text-brand opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+                      <ul className="space-y-4">
+                        {project.details.map((detail, dIdx) => (
+                          <li key={dIdx} className="flex gap-3 text-slate-400 text-sm leading-relaxed font-medium">
+                            <ChevronRight size={16} className="mt-1 flex-shrink-0 text-brand" />
+                            {detail}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
