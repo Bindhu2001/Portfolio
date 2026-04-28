@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className={`w-full glass-card rounded-full px-8 py-4 flex justify-between items-center pointer-events-auto transition-all duration-500 ${isScrolled ? 'shadow-brand/20 shadow-2xl scale-95' : ''}`}>
         <div className="text-xl font-black text-white tracking-tighter flex items-center gap-2">
           <div className="w-6 h-6 bg-brand rounded-full animate-pulse shadow-[0_0_15px_rgba(168,85,247,0.5)]" />
-          BINDU<span className="text-brand-light">.</span>V
+          BINDU<span className="text-brand-light"></span>V
         </div>
 
         {/* Desktop Menu */}

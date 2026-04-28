@@ -29,30 +29,25 @@ export default function Footer() {
           </div>
 
           <div className="glass-card rounded-[50px] p-12 glow-border relative group">
-             <div className="absolute top-8 right-8 text-brand animate-bounce">
-                <ArrowUpRight size={32} />
-             </div>
-             <div className="space-y-10">
-                <div>
-                   <p className="text-xs font-black tracking-[0.3em] text-slate-500 mb-4 uppercase">Direct Line</p>
-                   <a href="mailto:binduvijayan513@gmail.com" className="text-3xl md:text-4xl font-bold hover:text-brand transition-colors break-words">
-                      binduvijayan513<span className="text-brand">@</span>gmail.com
-                   </a>
-                </div>
-                <div>
-                   <p className="text-xs font-black tracking-[0.3em] text-slate-500 mb-4 uppercase">Base</p>
-                   <p className="text-3xl font-bold">Palakkad, India</p>
-                </div>
-             </div>
+            <div className="absolute top-8 right-8 text-brand animate-bounce">
+              <ArrowUpRight size={32} />
+            </div>
+            <div className="space-y-10">
+              <div>
+                <p className="text-xs font-black tracking-[0.3em] text-slate-500 mb-4 uppercase">Direct Line</p>
+                <a href="mailto:binduvijayan513@gmail.com" className="text-3xl md:text-4xl font-bold hover:text-brand transition-colors break-words">
+                  binduvijayan513<span className="text-brand">@</span>gmail.com
+                </a>
+              </div>
+              <div>
+                {/* <p className="text-xs font-black tracking-[0.3em] text-slate-500 mb-4 uppercase">Base</p> */}
+                <p className="text-3xl font-bold">Palakkad, India</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-600 text-[10px] font-black tracking-widest uppercase">
-          <p>© {currentYear} BINDU V. DESIGNED FOR THE FUTURE.</p>
-          <div className="flex items-center gap-2">
-            MADE WITH <Heart size={14} className="text-brand fill-current" /> BY ANTIGRAVITY
-          </div>
-        </div>
+
       </div>
     </footer>
   );

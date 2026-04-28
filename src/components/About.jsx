@@ -47,16 +47,7 @@ export default function About() {
         </div>
 
         {/* Decorative Visual Element */}
-        <div className="hidden lg:block relative">
-          <div className="relative w-full aspect-square glass-card rounded-[40px] rotate-3 flex items-center justify-center p-12 overflow-hidden glow-border">
-             <div className="absolute inset-0 bg-gradient-to-br from-brand/20 to-transparent" />
-             <div className="text-[200px] font-black opacity-10 select-none tracking-tighter">BV</div>
-             <div className="absolute bottom-10 left-10 text-left">
-                <p className="text-brand-light font-mono text-sm mb-1">// Current Focus</p>
-                <h3 className="text-2xl font-bold">React Native & AI Integration</h3>
-             </div>
-          </div>
-        </div>
+       
       </div>
     </section>
   );
